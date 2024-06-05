@@ -65,9 +65,11 @@ def multiply(number1, number2):
     multiplicand = binaryConverter(max(number1, number2))
     multiplicand.insert(0, 0)
     multiplier = recoder(binaryConverter(min(number1, number2)), len(multiplicand))
+    print(f"\nMultiplicand: {max(number1, number2)}, binary: {bin(max(number1, number2))[2:]}")
+    print(f"Multiplier: {min(number1, number2)}, binary: {bin(min(number1, number2))[2:]}")
+    print(f"Recoded multiplier: {multiplier}\n")
     multiplier.reverse()
     final = []
-    print("\n")
     for i in range(len(multiplier)):
         if multiplier[i] == 0:
             print(f"Step {i+1}: Recoded value is 0, Shift 1 bit.")
